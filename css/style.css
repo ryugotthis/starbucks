@@ -1,0 +1,326 @@
+body {
+}
+/* COMMON */
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #f6f5f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #c8c8c8;
+  /* background-color: rgb(255, 255, 240); */
+  z-index: 9;
+}
+header > .inner {
+  height: 120px;
+}
+header .logo {
+  position: absolute;
+  /* background-color: pink; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 75px;
+}
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+header .sub-menu .menu {
+  /* background-color: pink; */
+}
+header .sub-menu .menu > ul {
+  display: flex;
+  /* align-items: center; */
+}
+header .sub-menu .menu > ul li::before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  background-color: black;
+  /* 가운데 위치시키는 두가지 방법 */
+  /* top: 0;
+  bottom: 0;
+  margin: auto; */
+  margin: 11px 0;
+}
+header .sub-menu .menu > ul li:first-child:before {
+  display: none;
+}
+header .sub-menu .menu > ul li a {
+  /* background-color: yellow; */
+  font-size: 12px;
+  display: block;
+  /* 부모가 li이라서 위에 고정됨 마진은 bottom 고려 안해도 상관없음 */
+  margin: 11px 16px;
+
+  color: grey;
+}
+header .sub-menu .menu > ul li a:hover {
+  color: black;
+}
+header .sub-menu .search {
+  position: relative;
+  height: 34px;
+}
+header .sub-menu .search input {
+  width: 36px;
+  height: inherit;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+header .sub-menu .search input:focus {
+  width: 220px;
+}
+header .sub-menu .search .material-icons {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 24px;
+  /* background-color: yellow; */
+}
+header .sub-menu .search.focused .material-icons {
+  display: none;
+}
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+header .main-menu .item .item-name {
+  padding: 10px 20px 34px;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0;
+}
+header .main-menu .item:hover .item-name {
+  background-color: #333;
+  color: rgb(16, 127, 16);
+}
+header .main-menu .item .item-contents {
+  display: none;
+  position: fixed;
+  width: 100%;
+  left: 0;
+}
+header .main-menu .item:hover .item-contents {
+  display: block;
+}
+header .main-menu .item:hover .item-contents .contents-menu {
+  background-color: #2c2a29;
+}
+header .main-menu .item:hover .item-contents .contents-menu > ul {
+  padding: 20px 0;
+  display: flex;
+}
+header .main-menu .item:hover .item-contents .contents-menu > ul > li {
+  width: 240px;
+  color: white;
+}
+header .main-menu .item:hover .item-contents .contents-menu > ul > li h4 {
+  padding: 20px 0;
+  font-size: 14px;
+}
+header .main-menu .item:hover .item-contents .contents-menu > ul > li ul li {
+  font-size: 12px;
+  padding: 5px 0;
+}
+header .main-menu .item:hover .item-contents .contents-texture {
+  background-image: url('/images/main_menu_pattern.jpg');
+  /* background-color: pink; */
+  font-size: 12px;
+}
+header .main-menu .item:hover .item-contents .contents-texture .inner {
+  padding: 20px 0;
+}
+header .main-menu .item:hover .item-contents .contents-texture h4 {
+  color: white;
+}
+header .main-menu .item:hover .item-contents .contents-texture p {
+  padding: 4px 0 20px;
+}
+header .badges {
+  position: absolute;
+  top: 134px;
+  right: 10px;
+}
+header .badge {
+  margin-top: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 100);
+}
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  background-image: url('/images/visual_bg.jpg');
+  background-position: center;
+}
+.visual .inner {
+  height: 646px;
+}
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.visual .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+.visual .cup1.image {
+  position: absolute;
+  top: 80px;
+  right: 0;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 50px;
+  right: 220px;
+}
+.visual .cup2.image {
+  position: absolute;
+  top: 150px;
+  right: 200px;
+}
+.visual .cup2.text {
+  position: absolute;
+  top: 300px;
+  right: 450px;
+}
+.visual .spoon {
+  position: absolute;
+  top: 400px;
+  right: 450px;
+}
+.visual .fade-in {
+  opacity: 0;
+}
+
+/* NOTICE */
+.notice .notice-line .inner {
+  display: flex;
+}
+.notice .notice-line .inner-left {
+  height: 62px;
+  display: flex;
+  width: 60%;
+  left: 0;
+  background-color: #333;
+  align-items: center;
+}
+.notice .notice-line .inner-left h2 {
+  font-size: 17px;
+  color: white;
+  margin-right: 20px;
+}
+.notice .notice-line .inner-left .swiper {
+  height: 62px;
+  flex-grow: 1;
+}
+.notice .notice-line .inner-left .swiper .swiper-slide {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+}
+.notice .notice-line .inner-left .swiper .swiper-slide a {
+  color: white;
+}
+.notice .notice-line .inner-left .notice-line-more .material-icons {
+  color: #fff;
+  font-size: 30px;
+}
+.notice .notice-line .inner-right {
+  width: 40%;
+  background-color: ivory;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.notice .notice-line .inner-right h2 {
+  margin-right: 20px;
+  font-size: 17px;
+}
+.notice .notice-line .inner-right .material-icons {
+  color: #333;
+  font-size: 30px;
+}
+.notice .promotion {
+  height: 693px;
+  background-color: #f6f5ef;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.4s;
+}
+.notice .promotion.hide {
+  height: 0;
+}
+.notice .promotion .swiper {
+  /* background-color: green; */
+  position: absolute;
+  width: calc(819px * 3 + 20px);
+
+  height: 553px;
+  top: 40px;
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+  /* swiper크기의 절반  2477  이 방법 많이 사용됨 가운데 고정시키기위해*/
+  /* 왼쪽으로부터 50%지점으로 고정시키고 반의 값을 왼쪽으로 당기기   */
+}
+.notice .promotion .swiper-slide {
+  opacity: 0.5;
+  transition: opacity 1s;
+  position: relative;
+}
+.notice .promotion .swiper-slide-active {
+  opacity: 1;
+  /* 가운데만 투명도 1로 설정하기 */
+}
+.notice .promotion .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* 이미 위에 가로너비 지정해줘서 margin 사용가능 */
+}
